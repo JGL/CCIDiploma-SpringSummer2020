@@ -76,7 +76,7 @@ In addition to the formal assessment at the end of the term, I will be setting w
 
 Remember that small, short, technical exercises can be the root of much bigger ideas and projects that could last a lifetime.
 
-## Week 1 (week 39 of 52, commencing Monday 23rd September 2019) - Introduction and Remembering
+## Week 1 (week 7 of 52, commencing Monday 10th February 2020) - Introduction
 
 ### Monday - Introduction to Unit 4 - Coding for Collaborative App Development
 
