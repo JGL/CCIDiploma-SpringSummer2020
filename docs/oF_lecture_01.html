@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Creative Computing - Spring Summer 2020: Week 1: Lecture 1: Introduction to openFrameworks</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/whiteJGL.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Creative Computing</h2>
+				<p>Joel Gethin Lewis</p>
+				<p>Week 1: Lecture 1: Introduction to openFrameworks</p>
+			</section>
+			<section>
+				<h3>What I'm going to talk about now:</h3>
+				<ol start=0>
+					<li>Introductions.</li>
+					<li>Questions.</li>
+					<li>My motivations and my aims for the next year.</li>
+					<li>What are your aims for the next year?</li>
+					<li>Doing this right thing/Ethics.</li>
+					<li>Copying/Plagarism.</li>
+					<li>Practice.</li>
+					<li>How to criticise well.</li>
+					<li>Homework assignment!</li>
+				</ol>
+			</section>
+			<section>Are you recording Joel? Have you taken the register first?</section>
+			<section>
+				<h3>0. Introductions.</h3>
+				<ol>
+					<li>What do you like to be called?</li>
+					<li>How did you get to college today?</li>
+					<li>How are you feeling today in one word?</li>
+				</ol>
+			</section>
+			<section>
+				<h3>1. Questions?</h3>
+				<ul>
+					<li>What questions do you have?</li>
+					<li>What are your concerns? What are you worried about? What do you want to ask but you are
+						embarrassed?</li>
+					<li>All questions allowed!</li>
+					<li>20 minutes alone on post it notes, then double group size every 10 minutes until it's the whole
+						group.</li>
+					<li>This idea came from <a href="http://thesystemis.com/">Zach Lieberman</a>. He does this exercise
+						at the start of every session of <a href="https://sfpc.io/">School of Poetic Computation in New
+							York</a>.</li>
+				</ul />
+			</section>
+			<section>
+				<h3>2. My motivations and my aims for the next year. (continued).</h3>
+				<ul>
+					<li>Brain exploding and some coding.</li>
+					<li>I'm going to reference <a href="https://www.wikipedia.org/">Wikipedia</a> a lot in this
+						course, because I think it's one of the best things that humanity has ever made, and I wish
+						I'd had it when I was young. Also it's free - I hated it when teachers would reference books
+						that I couldn't afford when I was at university.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>2. My motivations and my aims for the next year (continued).</h3>
+				<ul>
+					<li>I only ask that you pay attention and ask questions if you have them. I'd really encourage
+						you to take the time to watch the films and read the references I put up. Think of them as
+						<a href="https://en.wikipedia.org/wiki/Cheating_in_video_games#Cheat_codes">cheat codes</a>
+						to get you to the next level quicker than I did.</li>
+					<li>To <b>introduce</b> lots of interesting concepts from many areas so that you know the magic
+						word to search for if you want to know more. <a href="https://en.wikipedia.org/wiki/Obfuscation">Obfuscation</a> is a BIG problem.</li>
+					<li>To teach you how to code, to start you on that path and point you in the
+						right direction.</li>
+					<li>To teach the history of creative computing, and by extension, computing, creativity and
+						everything (-;.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>2. My motivations and my aims for the next year (continued).</h3>
+				<ul>
+					<li>To teach you see problems at many levels (<a href="https://en.wikipedia.org/wiki/Abstraction">abstraction</a>), break down problems
+						(<a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">decomposition</a>),
+						find the order in them (<a href="https://en.wikipedia.org/wiki/Pattern_recognition_(psychology)">pattern
+							recognition</a>), make solutions using a series of steps (<a href="https://en.wikipedia.org/wiki/Algorithm">algorithms</a>) and realise that you
+						might be able to use that solution in lots of areas (<a href="https://en.wikipedia.org/wiki/Generalization">generalisation</a>).</li>
+					<li>Most of all, to <b>teach</b> you to be <b>autodidacts</b>, and, as previously mentioned, to
+						blow your mind <b>at least</b> once per lecture.</li>
+					<li>First task: <b>what</b> is an <b>autodidact</b>? </li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions...</h3>
+				<ul>
+					<li>Taking some inspiration from the Bauhaus, I think materiality is interesting. What does
+						materiality mean? I hear it all the time at universities.</li>
+					<li>The Bauhaus also had the best parties, do we want to do that too?</li>
+					<li>This year is not a break, it's about practice. We are going to do projects all the time. What
+						do you want to make? What are the issues that matter to you? Why do they matter to you?</li>
+					<li>What kind of utopia do you want? I think I want university everywhere, forever, for everyone.
+						Sometimes teaching, sometimes learning.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li><a href="http://www.caitlinmorris.net/">Caitlin Morris</a> has some advice for you all:
+						<blockquote cite="http://www.caitlinmorris.net/">
+							"Remind students that technical exercises can be the root of a bigger idea. I’ve had
+							students submit small
+							sketches along with their introductory exercises under the prompt of “if I worked on this
+							for another
+							month/year, what
+							could it become?”. Some really beautiful ideas emerge and I’ve found that it makes students
+							more
+							concept-attentive in their weekly projects, as well as providing some groundwork for larger
+							final projects."
+						</blockquote>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>I think this is great advice for how to make progress to bigger goals:<img src="img/HenrikKnibergCarDiagram.jpg" width="50%"></li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>You are going to go further faster than anyone else here.</li>
+					<li>Faster than the BSc, the MSc, the PhD's or the staff.</li>
+					<li>The reason is that you already have a practice.</li>
+					<li>Creative computing knowledge can be applied to ANY practice. See the <a href="https://mitpress.mit.edu/books/computational-thinking">MIT Computational Thinking
+							book</a> to see how
+						researchers in many fields are learning computational knowledge that even computer scientists
+						don't use, as
+						they don't have the orginal subject knowledge.</li>
+					<li>Do we have any textiles people here? Textiles is the beginning of computing! The Jacquard Loom
+						was the first programmable object. Also, Anni Albers is one of my favourite artists. How could
+						we be inspired by her practice?</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>Again, that MIT Computational Thinking book has a large section about the importance of
+						computing to every area
+						of science. I want to prove that for craft and design and art.</li>
+					<li>Do you want to do the same? This is what we are all here to do.</li>
+					<li>We are now a community.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>Introduction exercise: "Name Circle".</li>
+					<li>Energy exercise: "Clap Circle".</li>
+					<li>Do you know any more of these? Send me them if you do.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>Circle is always the way I want to do things when we discuss, but I’m going to bend it into a
+						half circle when I do presentations, but I’m going to sit in the middle.</li>
+					<li> Sit where you like on chairs or on the floor or whatever. If you need to go to the bathroom or
+						take a moment
+						it’s fine, you don’t have to ask.</li>
+					<li> Please silence
+						your devices so everyone else finds it easier to pay attention. Saying that, I actively
+						encourage you to use
+						devices when you are in this community whenever you want to.</li>
+					<li>Part of what you are going to do together is to
+						write notes on what is going on so you can share them.</li>
+					<li>It’s up to you to organise things.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li> I’m going to record
+						my screen and camera as a backup, which you can use if you want. Come to me if you want video
+						files
+						on the
+						Slack.</li>
+					<li>I will also post my lecture slides, they will always be online on the Github. That’s how
+						I’m
+						delivering
+						them now.</li>
+					<li>The complete slides for the course aren’t available yet as they don’t exist. I’m going to
+						write as we
+						go because this is the first time that this is happening.</li>
+					<li>I need you to help future <b>DIPLOMATS</b>!</li>
+					<li>What
+						do we call
+						ourselves? What is our motto? Secret handshake?</li>
+					<li>It’s up to us in this community to make it kind. I need your help to do that.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li><b>YOU ALL</b></li>are going to produce the wiki for the course!</li>
+					<li>They are going to make notes and share
+						them together, I
+						will also add content to the wiki.</li>
+					<li>There will be prizes for best writer, editor, illustrator, photographer,
+						videographer, musician and influencer/hype person at the end of the year.</li>
+					<li>Demo the course wiki, make a new page for companies to visit.</li>
+					<li>Who has a GitHub ID already?</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>I want someone who doesn't have a GitHub ID to pair up with someone who has and the person who
+						has show the person who hasn't how to sign up. Everyone do that. Give me your usernames on the
+						Slack when you have done it and I'll add you to the GitHub project for the whole term.</li>
+					<li>Which companies do you want to visit? You must perfect moving as a silent unit! You could make a
+						patch to thank
+						people you visit? See <a href="http://paglen.com/?l=work&s=symbology">Trevor Paglen's Symbology
+							work</a> for some inspiration.</li>
+					<li>Which galleries do you want to visit? Make a page for that.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>Do we want to do social media?</li>
+					<li>What is our course Code of Conduct (CoC)? From p5js? Let's discuss.</li>
+					<li>Do we want to make a Wikipedia page for the course? For each other? How do we get the Diplomats
+						nickname in there? Do we have to publish an article somewhere? On Twitter? Is this even allowed?
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>I'd like to set up an audio reactive visual posse/crew/gang that start doing visuals for club
+						nights and the
+						like, lets start running our own!</li>
+					<li>Or a TV station?</li>
+					<li>Nintendo Labo club?</li>
+					<li>Thoughts?</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. What are your aims for the next year? Some suggestions... (continued)</h3>
+				<ul>
+					<li>What about a trip?</li>
+					<li>What about a retreat?</li>
+					<li>What about <a href="https://thequadrangle.co/">here</a>?</li>
+				</ul>
+			</section>
+			<section>
+				<h3>4. Doing this right thing/Ethics.</h3>
+				<ul>
+					<li><img src="img/CassieRobinsonThoughts.jpg"></li>
+					<li>This was from a tweet by <a href="https://twitter.com/CassieRobinson">Cassie Robinson</a>, she's
+						ace.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>5. Copying/Plagarism.</h3>
+				<ul>
+					<li><img src="img/JarmuschQuote.jpg" width="33%"></li>
+					<li>This is the <a href="https://www.arts.ac.uk/study-at-ual/academic-regulations/student-regulations/referencing-and-academic-misconduct">official
+							UAL</a> page on referencing and academic misconduct.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>5. Copying/Plagarism (continued).</h3>
+				<ul>
+					<li>The main thing I take from it is this section:<blockquote>"Throughout your studies, you will be
+							encouraged to reference the
+							work of other artists, writers, designers or performers in your work. Tutors will expect to
+							find reference to
+							the sources of your ideas in supporting documentation such as sketchbooks or initial drafts.
+							This is an
+							essential and valuable part of your education. <b>As long as the source of the ideas is
+								acknowledged, this is not
+								plagiarism</b>."</blockquote>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>13. Homework assignment!</h3>
+				<ul>
+					<li>
+						<a href="https://github.com/JGL/CCIDiploma-AutumnWinter2019/wiki/Week-1-Homework">To do today
+							and tomorrow afternoons.</a></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Thanks!</h2>
+				<ul>
+					<li>More about me: <a href="https://twitter.com/joelgethinlewis">@joelgethinlewis</a></li>
+					<li>Get in contact via the CCI Slack!</a>
+					</li>
+					<li>Website:<br><a href="https://jgl.github.io/CCIDiploma-SpringSummer2020/">https://jgl.github.io/CCIDiploma-SpringSummer2020/</a>
+					</li>
+					<li>Today's slides:<br><a href="https://jgl.github.io/CCIDiploma-SpringSummer2020/oF_lecture_01.html">https://jgl.github.io/CCIDiploma-SpringSummer2020/oF_lecture_01.html</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			// Push each slide change to the browser history
+			history: true,
+			// Display a presentation progress bar
+			progress: true,
+			// Display the page number of the current slide
+			slideNumber: 'c/t',
+
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>
